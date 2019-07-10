@@ -15,7 +15,16 @@
 }
 
 .name {
-  
+
+}
+
+.user-info {
+  text-align: left;
+  margin-left: 10%;
+}
+
+.movies {
+  text-align: left;
 }
 
 .App-logo {

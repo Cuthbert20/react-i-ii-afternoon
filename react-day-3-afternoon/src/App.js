@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import data from './data'
+import ButtonPrev from './components/ButtonPrev'
 
 class App extends Component {
   constructor(){
@@ -32,13 +33,13 @@ class App extends Component {
     console.log(this.state.index)
     let dataFn = data.map(elm => {
       return(
-        <div key= {elm.id} className="name" >
+        <div key= {elm.id} className="user-info" >
         <h1>{elm.name.first} {elm.name.last}</h1>
         <h3>{`From: ${elm.city}, ${elm.country}`}</h3>
         <h3>{`Job Title: ${elm.title}`}</h3>
         <h3>{`Employer: ${elm.employer}`}</h3>
         <h3>Favorite Movie:</h3>
-        <ol>
+        <ol className="movies" >
           <li>{elm.favoriteMovies[0]}</li>
           <li>{elm.favoriteMovies[1]}</li>
           <li>{elm.favoriteMovies[2]}</li>
