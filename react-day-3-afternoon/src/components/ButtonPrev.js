@@ -10,7 +10,7 @@ export default class ButtonPrev extends Component {
     }
     render(){
         return(
-            <button onClick={this.props.previous} ></button>
+            <button onClick={this.props.previous} >Previous</button>
         )
     }
 }

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import data from './data'
 import ButtonPrev from './components/ButtonPrev'
+import ButtonNext from './components/ButtonNext'
 
 class App extends Component {
   constructor(){
@@ -54,8 +55,10 @@ class App extends Component {
         Home
       </header>
       <div>{dataFn[this.state.index]}</div>
-      <button onClick={this.previous} >Previous</button>
-      <button onClick={this.next} >Next</button>
+      {/* <button onClick={this.previous} >Previous</button> */}
+      <ButtonPrev previous={this.previous} />
+      {/* <button onClick={this.next} >Next</button> */}
+      <ButtonNext next={this.next} />
     </div>
   );
 }
