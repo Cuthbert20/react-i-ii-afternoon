@@ -3,6 +3,7 @@ import './App.css';
 import data from './data'
 import ButtonPrev from './components/ButtonPrev'
 import ButtonNext from './components/ButtonNext'
+import Edit from './components/Edit'
 
 class App extends Component {
   constructor(){
@@ -18,6 +19,7 @@ class App extends Component {
     }
     this.previous = this.previous.bind(this)
     this.next = this.next.bind(this)
+    this.edit = this.edit.bind(this)
   }
   previous(){
     this.setState({
@@ -28,6 +30,9 @@ class App extends Component {
     this.setState({
       index: this.state.index + 1
     })
+  }
+  edit(){
+    
   }
   render(){
     console.log(data)
@@ -57,7 +62,7 @@ class App extends Component {
       <div>{dataFn[this.state.index]}</div>
       {/* <button onClick={this.previous} >Previous</button> */}
       <ButtonPrev previous={this.previous} />
-
+      <Edit edit={this.edit} />
       {/* <button onClick={this.next} >Next</button> */}
       <ButtonNext next={this.next} />
     </div>
