@@ -51,12 +51,13 @@ class App extends Component {
     
   return (
     <div className="App">
-      <header className={"head"}>
+      <header className="head">
         Home
       </header>
       <div>{dataFn[this.state.index]}</div>
       {/* <button onClick={this.previous} >Previous</button> */}
       <ButtonPrev previous={this.previous} />
+
       {/* <button onClick={this.next} >Next</button> */}
       <ButtonNext next={this.next} />
     </div>
